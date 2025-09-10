@@ -273,10 +273,29 @@ header {
 .produtos-card:hover {
 border: solid var(--cor-botao) 2px;
 }
-.produtos-card img {
+
+
+.img-card{
+  max-width: 200px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;  
+  position: relative;
+
+}
+
+.img-card img{
   max-width: 100%;
   object-fit: cover;
+  position: absolute;
 }
+
+.produtos-card:hover .img-card img:nth-child(2){
+  opacity: 0%;
+}
+
 .preco-antigo {
   text-decoration: line-through;
   font-size: 10px;
