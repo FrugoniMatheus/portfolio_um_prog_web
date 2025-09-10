@@ -1,92 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MEU PROJETO</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="shortcut icon" href="assets/imgs/logo/logo_sem_fundo.png" type="image/x-icon">
-</head>
-<body>
-
-  <header>
-    <div class="logo">
-      <img src="assets/imgs/logo/favicon.png" alt="Logo Empresa New Sneakers">
-    </div>
-    <nav class="menuNav">
-      <ul>
-        <li><a class="destaque" href="#sobre">Sobre nós</a></li>
-        <li><a class="destaque" href="">Produtos em Destaque</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="home">
-    <div class="slogan">
-      <h1>Mais do que tênis, uma experiência.</h1>
-      <a href="">Saiba mais!</a>
-    </div>
-    <div class= "sloganImg">
-      <img src="assets/imgs/adidas/tenis00.1.webp" alt="Imagem de Tenis para venda">
-    </div>
-  </section>
-
-  <section class="sobre" href="#sobre">
-    <h3 id="titulo-sobre">Sobre Nós</h3>
-      <div class="sobreDiv">
-        <img src="assets/imgs/logo/favicon.png" alt="">
-        <div class="sobreTexto">
-          <h3>New Sneakers</h3>
-          <p>A New Sneakers nasceu em 2025, em Rio Claro, como uma revendedora não oficial das marcas Adidas e Fila. 
-            Nosso compromisso é oferecer tênis de qualidade, unindo conforto, 
-            estilo e as últimas tendências para atender nossos clientes da melhor forma.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEW SNEAKERS</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/imgs/logo/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-nav">
+        <div class="logo">
+          <img
+            src="assets/imgs/logo/logo-sem-fundo.png"
+            alt="Logo Empresa New Sneakers"
+          />
+        </div>
+        <nav class="menuNav">
+          <ul>
+            <li><a class="destaque" href="#sobre">Sobre nós</a></li>
+            <li>
+              <a class="destaque" href="assets/catalogo_produtos/catalogo.html"
+                >Catalogo de Produtos</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="container-itens-menu">
+          <img src="assets/imgs/icons/icone_pesquisa.svg" class="icons" />
+          <input
+            type="text"
+            placeholder="O que você procura?"
+            id="input-pesquisa"
+          />
+          <img src="assets/imgs/icons/icone_favorito.svg" class="icons" />
+          <img src="assets/imgs/icons/icone_compras.svg" class="icons" />
+          <img
+            class="icons"
+            src="assets/imgs/icons/icone_conta.svg"
+            id="conta-icon"
+          />
         </div>
       </div>
-  </section>
+    </header>
 
-  <section class="produtosDestaque">
-
-    <div class="produtoTitulo">
-      <h3>Produto Destaque</h3>
-      <hr>
-    </div>
-
-    <div class="produtoDivCategoria">
-      <a class="produtoCategoriaBtn">
-        Tênis
-      </a>
-    </div>
-    <div class="grid">
-      <div class="produtoDestaqueDivImg">
-        <div class="produtoDestaqueImg">
-          <img src="assets/imgs/adidas/tenis00.0.webp" alt="">
-          <div class="produtoDestaqueImgTexto">
-            <span>Tênis Adidas</span>
-            <span>R$399,90</span>
-          </div>
+    <section class="home">
+      <div class="container">
+        <div class="slogan">
+          <h1>Mais do que tênis, uma experiência.</h1>
+          <a href="">Saiba mais!</a>
         </div>
-        <div class="produtoDestaqueImg">
-          <img src="assets/imgs/adidas/tenis01.0.webp" alt="">
-          <div class="produtoDestaqueImgTexto">
-            <span>Tênis Adidas</span>
-            <span>R$269,90</span>
-          </div>
-        </div>
-        <div class="produtoDestaqueImg">
-          <img src="assets/imgs/fila/tenis00.0.webp" alt="">
-          <div class="produtoDestaqueImgTexto">
-            <span>Tênis Fila</span>
-            <span>R$280,90</span>
+        <img
+          src="assets/imgs/imagens-banner/tenis_espotivo_adidas.webp"
+          alt="Imagem de Tenis para venda"
+          id="tenis-baner"
+        />
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <h3 id="titulo-sobre">Sobre Nós</h3>
+      <div class="container">
+        <img
+          src="assets/imgs/imagens-banner/rio_claro_sp.png"
+          id="foto-cidade"
+        />
+        <div class="sobreDiv">
+          <img src="assets/imgs/logo/favicon.png" alt="" />
+          <div class="sobreTexto">
+            <h3>New Sneakers</h3>
+            <p>
+              A New Sneakers nasceu em 2025, em Rio Claro, como uma revendedora
+              não oficial das marcas Adidas e Fila. Nosso compromisso é oferecer
+              tênis de qualidade, unindo conforto, estilo e as últimas
+              tendências para atender nossos clientes da melhor forma.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="contatoEmpresa"></div>
-    <div class="redeSocial"></div>
-  </footer>
+    <section class="produtosDestaque">
+      <h3 id="titulo-prod-destaque">Produtos em Destaque</h3>
+      <div class="grid">
+        <div class="produtos-card">
+          <img
+            src="assets/catalogo_produtos/img/tenis_esportivos/adidas/tenis_esportivo1.webp"
+            alt="tenis casual adidas"
+          />
+          <div class="descricao">
+            <h3>Tênis Esportivo Adidas</h3>
+            <span class="preco-antigo">R$600,00</span><br />
+            <span> R$499,99</span>
+          </div>
+          <button class="compra">Comprar</button>
+        </div>
+        <div class="produtos-card">
+          <img
+            src="assets/catalogo_produtos/img/tenis_casual/adidas/casual_tenis2.webp"
+          />
+          <div class="descricao">
+            <h3>Tênis Casual Adidas</h3>
+            <span class="preco-antigo">R$350,00</span><br />
+            <span>R$300,00</span>
+          </div>
+          <button class="compra">Comprar</button>
+        </div>
+        <div class="produtos-card">
+          <img
+            src="assets/catalogo_produtos/img/tenis_casual/fila/casual_tenis3.png"
+          />
+          <div class="descricao">
+            <h3>Tênis Casual Fila</h3>
+            <span class="preco-antigo">R$700,00</span><br />
+            <span>R$499,00</span>
+          </div>
+          <button class="compra">Comprar</button>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <footer>
+      <div class="container-footer">
+       
+        <div class="maps">
+          <h3>Nossa Localização</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.0992871907328!2d-47.5753707005814!3d-22.414073058820865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7dafa3f5df38f%3A0xdae5d735477dc38c!2sClaretiano!5e0!3m2!1spt-BR!2sbr!4v1757382736290!5m2!1spt-BR!2sbr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="contatoEmpresa">
+          <h3>Nossos Contatos</h3>
+          <img
+              src="assets/imgs/icons/icone_whatsapp.svg"
+              alt="Whatsapp"
+              class="icons"
+            />
+              <img
+              src="assets/imgs/icons/icone_gmail.svg"
+              alt="gmail"
+              class="icons"
+            />
+        </div>
+        <div class="redeSocial">
+          <h3>Siga Nossas Redes Sociais Oficias</h3>
+          <div class="container-icons-footer">
+            <img
+              src="assets/imgs/icons/icone_instagram.svg"
+              alt="instagram"
+              class="icons"
+            />
+            <img
+              src="assets/imgs/icons/icone_facebook.svg"
+              alt="facebook"
+              class="icons"
+            />
+            <img
+              src="assets/imgs/icons/icone_x.svg"
+              alt="x"
+              class="icons"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
