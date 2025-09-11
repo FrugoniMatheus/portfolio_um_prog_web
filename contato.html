@@ -4,8 +4,157 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato</title>
+  <link 
+    rel="stylesheet" 
+    href="assets/css/index.css"
+  />
+  <link 
+    rel="stylesheet" 
+    href="assets/css/contato.css"
+  />
 </head>
 <body>
+  <header>
+    <div class="container-nav">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./assets/imgs/logo/logo-sem-fundo.png"
+            alt="Logo Empresa New Sneakers"
+          />
+        </a>
+      </div>
+      <nav class="menuNav">
+        <ul>
+          <li><a class="destaque" href="index.html">Sobre nós</a></li>
+          <li>
+            <a class="destaque" href="./catalogo.html"
+              >Catalogo de Produtos</a
+            >
+          </li>
+          <li>
+            <a class="destaque" href="./contato.html">
+              Contato
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container-itens-menu">
+        <img src="assets/imgs/icons/icone_pesquisa.svg" class="icons" />
+        <input
+          type="text"
+          placeholder="O que você procura?"
+          id="input-pesquisa"
+        />
+        <img src="assets/imgs/icons/icone_favorito.svg" class="icons" />
+        <img src="assets/imgs/icons/icone_compras.svg" class="icons" />
+        <img
+          class="icons"
+          src="assets/imgs/icons/icone_conta.svg"
+          id="conta-icon"
+        />
+      </div>
+    </div>
+  </header>
+
+  <section class="container-form">
+    
+    <div class="form_box">
+
+      <h2 class="title">Fale conosco!</h2>
+      <form action="">
+
+        <div class="form_pessoal">
+          <div class="form_div form_div_pessoal">
+            <label class="">Nome Completo<span>*</span></label>
+            <input class="" type="text" name="name" placeholder="Digite seu nome">
+          </div>
+          <div class="form_div form_div_pessoal">
   
+            <label class="">E-mail <span>*</span></label>
+            <input type="email" name="email" placeholder="Digite seu e-mail">
+           
+          </div>
+          
+        </div>
+        <div class="form_div">
+          <label class="">Digite sobre o Assunto<span>*</span></label>
+          <input type="text" name="subject" placeholder="Assunto">
+
+        </div>
+
+        <div class="form_div">
+
+          <label class="">Endereço</label>
+          <input type="text" name="adress" placeholder="Seu endereço">
+          
+        </div>
+        
+        <div class="form_div">
+          <label class="">Celular</label>
+          <input type="text" name="phone" placeholder="Seu número">          
+        </div>
+
+        <div class="form_div">
+          <label class="">Mensagem<span>*</span></label>
+          <textarea name="message" placeholder="Descreva detalhadamente sua dúvida"></textarea>
+        </div>
+
+        
+        <button type="submit">Enviar</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container-footer">
+     
+      <div class="maps">
+        <h3>Nossa Localização</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.0992871907328!2d-47.5753707005814!3d-22.414073058820865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7dafa3f5df38f%3A0xdae5d735477dc38c!2sClaretiano!5e0!3m2!1spt-BR!2sbr!4v1757382736290!5m2!1spt-BR!2sbr"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="contatoEmpresa">
+        <h3>Nossos Contatos</h3>
+        <img
+            src="assets/imgs/icons/icone_whatsapp.svg"
+            alt="Whatsapp"
+            class="icons"
+          />
+            <img
+            src="assets/imgs/icons/icone_gmail.svg"
+            alt="gmail"
+            class="icons"
+          />
+      </div>
+      <div class="redeSocial">
+        <h3>Siga Nossas Redes Sociais Oficias</h3>
+        <div class="container-icons-footer">
+          <img
+            src="assets/imgs/icons/icone_instagram.svg"
+            alt="instagram"
+            class="icons"
+          />
+          <img
+            src="assets/imgs/icons/icone_facebook.svg"
+            alt="facebook"
+            class="icons"
+          />
+          <img
+            src="assets/imgs/icons/icone_x.svg"
+            alt="x"
+            class="icons"
+          />
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
