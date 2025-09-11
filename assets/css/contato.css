@@ -1,26 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-:root {
-  --cor-fonte: #12100b;
-  --cor-botao: #877b66;
-  --cor-fundo: #ffffff;
-  --cor-home: #262626;
-  --cor-sobre: #f5efe7;
-  --cor-prodDest: #f7f7f9;
-  --fonte-princiapl: "Montserrat";
-  --borda: #877b663c;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, textarea{
-  font-family: var(--fonte-princiapl);
-}
-
 .container-form{
   background: linear-gradient(-120deg, #877b66, 
   #877b663c);
@@ -66,7 +43,7 @@ body, textarea{
   width: 100%;
 }
 
-.form_div span{
+span{
   color: red;
   font-weight: bold;
 }
@@ -81,12 +58,11 @@ body, textarea{
 }
 
 
-.form_div  input,
-.form_div textarea{
+.form_div  input{
   width: calc(50% - 8px);
   height: 38px;
   border-radius: 8px;
-  border:  thin solid #999;
+  border:  thin solid var(--borda);
   padding-left: 16px;
   margin-bottom:  16px;
   font-size:  12px;
@@ -100,7 +76,21 @@ body, textarea{
   margin-right: 16px;
 }
 
-.form_box textarea{
+.form_msg{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form_msg input{
+  border-radius: 8px;
+  border:  thin solid var(--borda);
+  padding-left: 16px;
+  margin-bottom:  16px;
+  font-size:  12px;
+}
+
+.form_msg input{
   width: 100%;
   height: 100%;
   padding: 16px;
@@ -113,7 +103,7 @@ body, textarea{
   width: 180px;
   height: 48px;
   border-radius: 8px;
-  background-color: #877b66;
+  background-color: var(--cor-botao);
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -122,5 +112,5 @@ body, textarea{
 }
 
 .form_box button:hover{
-  background-color: #262626;
+  background-color: var(--cor-botao);
 }

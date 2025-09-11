@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --cor-fonte: #12100b;
+  --cor-botao: #877b66;
+  --cor-fundo: #ffffff;
+  --cor-home: #262626;
+  --cor-sobre: #f5efe7;
+  --cor-prodDest: #f1f1f3;
+  --cor-card:#EAEAEA;
+  --fonte-princiapl: "Montserrat";
+  --borda: #877b663c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cor-fundo);
+  font-family: var(--fonte-princiapl);
+  overflow-x: hidden;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  border: solid var(--borda);
+}
+.container-nav {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  height: 15vh;
+  gap: 100px;
+}
+.logo {
+  width: fit-content;
+  height: 100%;
+}
+
+.logo img {
+  max-height: 100%;
+  object-fit: cover;
+}
+.menuNav {
+  width: 100%;
+  height: 100%;
+}
+
+.menuNav > ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.menuNav > ul > li {
+  font-size: 1.2em;
+  list-style: none;
+}
+.material-symbols-outlined {
+  position: absolute;
+  top: 5px;
+  margin: 0 0 0 5px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.container-itens-menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+#input-pesquisa {
+  padding: 10px 30px;
+  height: 40px;
+  transition: 1s;
+  border: solid var(--borda) 1px;
+  border-radius: 50px;
+}
+.icons {
+  height: 40px;
+  opacity: 0.6;
+}
+.icons:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+#conta-icon {
+  padding: 5px;
+  opacity: 0.6;
+  height: 50px;
+  border: solid var(--borda) 2px;
+  border-radius: 50%;
+}
+#conta-icon:hover {
+  border: solid var(--cor-botao) 2px;
+  opacity: 1;
+}
+#input-pesquisa::placeholder {
+  padding: 0 24px;
+}
+#input-pesquisa:hover {
+  outline: solid var(--cor-botao) 1px;
+  cursor: pointer;
+}
+#input-pesquisa:focus {
+  outline: solid var(--cor-botao) 1px;
+}
+.destaque {
+  text-decoration: none;
+  color: var(--cor-fonte);
+  position: relative;
+  padding-bottom: 45px;
+}
+
+.destaque::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-botao);
+  transition: width 0.4s ease;
+}
+
+.destaque:hover::after {
+  width: 100%;
+}
