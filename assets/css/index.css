@@ -112,7 +112,6 @@
 .produtosDestaque {
   display: flex;
   flex-direction: column;
-  background-color: #efefef;
   align-items: center;
   margin-bottom: 50px;
 }
@@ -126,30 +125,14 @@
   display: flex;
   gap: 5px;
   padding: 25px;
+  background-color: var(--cor-fundo);
+  border: solid var(--borda);
   flex-direction: column;
   height: 100%;
   
 }
 .produtos-card:hover {
 border: solid var(--cor-botao) 2px;
-}
-
-
-.img-card{
-  max-width: 200px;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  object-fit: cover;  
-  position: relative;
-
-}
-
-.img-card img{
-  max-width: 100%;
-  object-fit: cover;
-  position: absolute;
 }
 
 .produtos-card:hover .img-card img:nth-child(2){

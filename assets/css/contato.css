@@ -114,3 +114,8 @@ span{
 .form_box button:hover{
   background-color: var(--cor-botao);
 }
+
+.title{
+  font-size: 2em;
+  color: var(--cor-botao);
+}

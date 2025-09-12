@@ -24,7 +24,6 @@ body {
   font-family: var(--fonte-princiapl);
   overflow-x: hidden;
 }
-
 header {
   width: 100vw;
   display: flex;
@@ -82,7 +81,6 @@ header {
 #input-pesquisa {
   padding: 10px 30px;
   height: 40px;
-  transition: 1s;
   border: solid var(--borda) 1px;
   border-radius: 50px;
 }
@@ -108,12 +106,16 @@ header {
 #input-pesquisa::placeholder {
   padding: 0 24px;
 }
-#input-pesquisa:hover {
+input:hover {
   outline: solid var(--cor-botao) 1px;
   cursor: pointer;
 }
-#input-pesquisa:focus {
-  outline: solid var(--cor-botao) 1px;
+input {
+  outline: solid var(--borda) 1px;
+  transition: 0.5s ease-in-out;
+}
+input:focus{
+    outline: solid var(--cor-botao) 1px;
 }
 .destaque {
   text-decoration: none;
@@ -135,4 +137,10 @@ header {
 
 .destaque:hover::after {
   width: 100%;
+}
+.produtos-card{
+  transition: 1s;
+}
+.produtos-card:hover {
+border: solid var(--cor-botao) 2px;
 }
