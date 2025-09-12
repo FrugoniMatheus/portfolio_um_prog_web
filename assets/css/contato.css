@@ -1,3 +1,8 @@
+span{
+  color: red;
+  font-weight: bold;
+}
+
 .container-form{
   background: linear-gradient(-120deg, #877b66, 
   #877b663c);
@@ -41,11 +46,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-span{
-  color: red;
-  font-weight: bold;
 }
 
 .form_pessoal{

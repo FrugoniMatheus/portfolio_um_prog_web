@@ -12,6 +12,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+
 .produtos-card {
   display: flex;
   gap: 5px;
@@ -21,14 +22,17 @@
   position: relative;
   border: solid var(--borda) 2px;
 }
+
 .produtos-card img {
   max-width: 100%;
   object-fit: cover;
 }
+
 .preco-antigo {
   text-decoration: line-through;
   font-size: 10px;
 }
+
 .compra {
   width: fit-content;
   padding: 5px;
@@ -38,13 +42,9 @@
   border-radius: 5px;
   font-weight: 700;
 }
+
 .compra:hover {
   background: var(--cor-fonte);
   cursor: pointer;
 }
-#titulo-secao {
-  width: 90vw;
-  padding: 20px 0;
-  font-size: 2em;
-  color: var(--cor-botao);
-}
+
