@@ -7,7 +7,7 @@
   --cor-home: #262626;
   --cor-sobre: #f5efe7;
   --cor-prodDest: #f1f1f3;
-  --cor-card:#EAEAEA;
+  --cor-card: #eaeaea;
   --fonte-princiapl: "Montserrat";
   --borda: #877b663c;
 }
@@ -32,7 +32,7 @@ header {
   border: solid var(--borda);
 }
 
-h2{
+h2 {
   width: 90vw;
   padding: 20px 0;
   font-size: 2em;
@@ -44,13 +44,15 @@ input {
   transition: 0.5s ease-in-out;
 }
 
-
+li {
+  list-style: none;
+}
 input:hover {
   outline: solid var(--cor-botao) 1px;
   cursor: pointer;
 }
 
-input:focus{
+input:focus {
   outline: solid var(--cor-botao) 1px;
 }
 
@@ -87,7 +89,6 @@ input:focus{
 
 .menuNav > ul > li {
   font-size: 1.2em;
-  list-style: none;
 }
 
 .material-symbols-outlined {
@@ -162,10 +163,81 @@ input:focus{
   width: 100%;
 }
 
-.produtos-card{
+.produtos-card {
   transition: 1s;
 }
 
 .produtos-card:hover {
-border: solid var(--cor-botao) 2px;
+  border: solid var(--cor-botao) 2px;
+}
+footer {
+  height: auto;
+  width: 100vw;
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--cor-home);
+}
+
+.container-footer,
+.container-footer2 {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+}
+iframe {
+  width: 500px;
+  height: 150px;
+  border: solid var(--cor-fundo) 2px;
+  border-radius: 10px;
+}
+
+.ajuda,
+.politicas,
+.formas_de_pagamentos,
+.contatos,
+.maps,
+.redes_sociais,
+.sobre-footer {
+  color: var(--cor-fundo);
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.redes_sociais,
+.formas_de_pagamentos,
+.contatos {
+  align-items: center;
+}
+
+.sobre-footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.copy {
+  display: flex;
+  width: 90vw;
+  align-items: center;
+}
+.texto {
+  display: flex;
+  border-top: solid var(--cor-fundo) 1px;
+  padding: 10px;
+  width: 100%;
+  color: var(--cor-fundo);
+  gap: 10px;
+  align-items: center;
+}
+.logo-footer {
+  width: 45px;
+}
+
+p a {
+  color: var(--cor-fundo);
+  text-decoration: none;
+  font-weight: 700;
 }
