@@ -129,13 +129,12 @@
   border: solid var(--borda);
   flex-direction: column;
   height: 100%;
-  
 }
 .produtos-card:hover {
-border: solid var(--cor-botao) 2px;
+  border: solid var(--cor-botao) 2px;
 }
 
-.produtos-card:hover .img-card img:nth-child(2){
+.produtos-card:hover .img-card img:nth-child(2) {
   opacity: 0%;
 }
 

@@ -1,11 +1,10 @@
-span{
+span {
   color: red;
   font-weight: bold;
 }
 
-.container-form{
-  background: linear-gradient(-120deg, #877b66, 
-  #877b663c);
+.container-form {
+  background: linear-gradient(-120deg, #877b66, #877b663c);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,90 +12,86 @@ span{
   height: 85vh;
 }
 
-.form_box{
+.form_box {
   display: flex;
   flex-direction: column;
-  background-color:#ffffff;
+  background-color: #ffffff;
   border-radius: 8px;
   width: 700px;
   height: 80vh;
 }
 
-.form_box .title{
+.form_box .title {
   padding: 24px 32px;
   font-size: 24px;
   border-bottom: thin solid #ccc;
 }
 
-
-.form_box form{
+.form_box form {
   display: flex;
   align-items: start;
   flex-wrap: wrap;
   padding: 32px;
 }
 
-.form_box label{
+.form_box label {
   display: flex;
   gap: 10px;
 }
 
-
-.form_div{
+.form_div {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.form_pessoal{
+.form_pessoal {
   display: flex;
   width: 100%;
 }
 
-.form_div_pessoal{
+.form_div_pessoal {
   width: 50%;
 }
 
-
-.form_div  input{
+.form_div input {
   width: calc(50% - 8px);
   height: 38px;
   border-radius: 8px;
-  border:  thin solid var(--borda);
+  border: thin solid var(--borda);
   padding-left: 16px;
-  margin-bottom:  16px;
-  font-size:  12px;
+  margin-bottom: 16px;
+  font-size: 12px;
 }
 
-.form_div_pessoal input{
+.form_div_pessoal input {
   width: calc(100% - 16px);
 }
 
-.form_div input:first-child{
+.form_div input:first-child {
   margin-right: 16px;
 }
 
-.form_msg{
+.form_msg {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.form_msg input{
+.form_msg input {
   border-radius: 8px;
-  border:  thin solid var(--borda);
-  padding-left: 16px;
-  margin-bottom:  16px;
-  font-size:  12px;
+  border:solid var(--borda) 1px;
+  margin-bottom: 16px;
+  font-size: 12px;
 }
 
-.form_msg input{
+.form_msg input {
   width: 100%;
   height: 100%;
   padding: 16px;
 }
 
-.form_box button{
+.form_box button {
   display: block;
   outline: none;
   border: none;
@@ -111,11 +106,12 @@ span{
   cursor: pointer;
 }
 
-.form_box button:hover{
+.form_box button:hover {
   background-color: var(--cor-botao);
 }
 
-.title{
+.form_box h2 {
+  margin-left: 32px ;
   font-size: 2em;
   color: var(--cor-botao);
 }
