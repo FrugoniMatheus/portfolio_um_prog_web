@@ -75,12 +75,12 @@ span {
 .form_msg {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 98%;
 }
 
 .form_msg input {
   border-radius: 8px;
-  border:solid var(--borda) 1px;
+  border: solid var(--borda) 1px;
   margin-bottom: 16px;
   font-size: 12px;
 }
@@ -111,7 +111,7 @@ span {
 }
 
 .form_box h2 {
-  margin-left: 32px ;
+  margin-left: 32px;
   font-size: 2em;
   color: var(--cor-botao);
 }
