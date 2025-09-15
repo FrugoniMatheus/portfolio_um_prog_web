@@ -170,6 +170,10 @@ input:focus {
 .produtos-card:hover {
   border: solid var(--cor-botao) 2px;
 }
+.preco-antigo {
+  text-decoration: line-through;
+  font-size: 10px;
+}
 footer {
   height: auto;
   width: 100vw;

@@ -1,0 +1,133 @@
+.detalhes_produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100vw;
+}
+.btn-container {
+  width: 90vw;
+  height: fit-content;
+  padding: 20px 0;
+  align-items: center;
+}
+.informacoes_produto {
+  display: flex;
+  grid-area: 1 / 3 / 4 / 4;
+  gap: 10px;
+  flex-direction: column;
+}
+.btn-acao {
+  align-self: flex-start;
+  width: fit-content;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid var(--borda) 2px;
+  background-color: var(--cor-botao);
+  color: var(--cor-fundo);
+}
+.grid-conteudo {
+  display: grid;
+  width: 90vw;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.detalhes_pagamentos {
+  display: flex;
+  flex-direction: column;
+}
+.avaliacoes {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.avaliacoes .icons {
+  height: 30px;
+  opacity: 1;
+}
+.avaliacoes a {
+  margin-left: 10px;
+  color: var(--cor-fonte);
+}
+.avaliacoes .icons:nth-child(5) {
+  height: 29px;
+}
+.classificacao {
+  font-size: 1.2rem;
+  border: solid var(--cor-botao) 1px;
+  padding: 5px;
+}
+.foto_produtos img {
+  max-width: 100%;
+}
+#terceira-imagem {
+  max-width: 100%;
+  grid-area: 2 / 1 / 3 / 3;
+}
+.cores {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.preview {
+  border: solid var(--borda) 2px;
+  width: 60px;
+}
+.preview:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.tamanhos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.guia-tamanhos {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+.guia-tamanhos a {
+  color: var(--cor-fonte);
+}
+.grid-tamanhos {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(4, 1fr);
+  cursor: pointer;
+  gap: 5px;
+}
+.numeracao {
+  background-color: var(--cor-prodDest);
+  padding: 10px 40px;
+  border: solid var(--cor-prodDest) 1px;
+}
+.numeracao:hover {
+  border: solid var(--cor-botao) 1px;
+}
+.frete {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.btn-frete {
+  background-color: var(--cor-botao);
+  border: solid var(--borda) 2px;
+  cursor: pointer;
+  padding: 5px;
+  color: var(--cor-fundo);
+  border-radius: 5px;
+}
+.cep-input {
+  padding: 5px;
+  width: 120px;
+  border: solid var(--borda) 1px;
+  border-radius: 5px;
+}
+.frete a {
+  color: var(--cor-fonte);
+  font-size: 13px;
+}
