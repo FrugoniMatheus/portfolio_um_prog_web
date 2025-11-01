@@ -13,19 +13,27 @@
     <title>login</title>
 </head>
 <body>
- <section class="login">
-
+ <section class="login" id="login" >
    <div class="container-form">
     <img src="./assets/imgs/icons/icone_conta(2).svg"  id="icon-conta">
     <form action="" method="post" class="form-login">
     <input type="text" id='nome'placeholder="Usuario" required>
-    <input type="password" id='senha'placeholder="Senha" required>
-    <div class="visualizar"><a href="">Esqueceu sua Senha ?</a> </div>
+    <div class="container-input-senha">
+      <input type="password" id='senha'placeholder="Senha" required>
+      <img src="./assets/imgs/icons/icone_olho_fechado.svg" class="visualizar" id="olho-fechado">
+       <img src="./assets/imgs/icons/icone_olho_aberto.svg" class="visualizar" id="olho-aberto">
+    </div>
+    <div class="links"><a href="">Esqueceu sua Senha ?</a> </div>
     <button class="btn-submit">Entrar</button>
   </form>
-  <div class="links">
-    <a href="">Não tem uma Conta ?</a>
+  <div class="container-icones-login">
+    <img src="./assets/imgs/icons/icone_google.svg" class="icons">
+     <img src="./assets/imgs/icons/icone_apple.svg" class="icons">
   </div>
+  <div class="links">
+    <a href="./cadastroUsuario.html">Não tem uma Conta?</a>
+  </div>
+  <img src="./assets/imgs/icons/icone_fechar.svg" class="icons" id="fechar">
 </div>
  </section>
 </body>

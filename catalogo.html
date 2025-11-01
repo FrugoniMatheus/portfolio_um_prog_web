@@ -6,6 +6,7 @@
     <title>Catalogo de Produtos</title>
     <link rel="stylesheet" href="assets/css/variaveis.css" />
     <link rel="stylesheet" href="./assets/css/catalogo.css" />
+    <link rel="stylesheet" href="./assets/css/login.css">
     <link
       rel="shortcut icon"
       href="./assets/imgs/logo/favicon.png"
@@ -52,11 +53,34 @@
             class="icons"
             src="./assets/imgs/icons/icone_conta.svg"
             id="conta-icon"
+            onclick="AbrirLogin()"
           />
         </div>
       </div>
     </header>
-
+<section class="login" id="login" inert>
+   <div class="container-form">
+    <img src="./assets/imgs/icons/icone_conta(2).svg"  id="icon-conta">
+    <form action="" method="post" class="form-login">
+    <input type="text" id='nome'placeholder="Usuario" required>
+    <div class="container-input-senha">
+      <input type="password" id='senha'placeholder="Senha" required>
+      <img src="./assets/imgs/icons/icone_olho_fechado.svg" class="visualizar" id="olho-fechado" onclick="mostrarSenha()">
+       <img src="./assets/imgs/icons/icone_olho_aberto.svg" class="visualizar" id="olho-aberto" onclick="mostrarSenha()">
+    </div>
+    <div class="links"><a href="">Esqueceu sua Senha ?</a> </div>
+    <button class="btn-submit">Entrar</button>
+  </form>
+  <div class="container-icones-login">
+    <img src="./assets/imgs/icons/icone_google.svg" class="icons" >
+     <img src="./assets/imgs/icons/icone_apple.svg" class="icons" >
+  </div>
+  <div class="links">
+    <a href="./cadastroUsuario.html">Não tem uma Conta?</a>
+  </div>
+  <img src="./assets/imgs/icons/icone_fechar.svg" class="icons" id="fechar" onclick="fecharLogin()">
+  </div>
+ </section>
     <section class="tenis-casuais">
       <h2>Tênis Casuais</h2>
         <div class="grid" id="grids">
@@ -192,5 +216,6 @@
       </div>
     </footer>
     <script src="./assets/scripts/produto.js" defer></script>
+    <script src="./assets/scripts/login.js"></script>
   </body>
 </html>

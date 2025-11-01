@@ -1,13 +1,21 @@
 .login{
     height: 100vh;
     width: 100vw;
+    opacity: 0;
+    top: 0;
     display: flex;
+    position: fixed;
+    z-index: 20;
+    transition: 0.3s;
+    background: var(--borda);
     align-items: center;
     justify-content: center;
 }
 .container-form{
     display: flex;
-    height: 50vh;
+    position: relative;
+    height: auto;
+    background:var(--cor-fundo);
     border: solid var(--cor-botao) 2px;
     border-radius: 5px;
     padding: 20px;
@@ -24,7 +32,7 @@
    opacity: 9;
    padding: 20px;
    height: 80px;
-    background: linear-gradient(-50deg, #877b66, #877b663c);
+   background: var(--cor-botao);
    border-radius: 50%;
 }
 .form-login{
@@ -41,22 +49,58 @@ gap: 20px;
 }
 .btn-submit{
     color: var(--cor-card);
-    padding: 5px;
+    padding: 10px;
     border: solid var(--cor-borda);
     font-weight: 700;
     background: var(--cor-botao);
     border-radius:5px;
+    cursor: pointer;
 }
-.visualizar{
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-font-size: 0.8rem;
+.btn-submit:hover{
+    background: var(--cor-fonte);
 }
-.visualizar a{
-font-size: 0.8rem;
-}
+
 .links a{
 font-size: 0.8rem;
+}
+.container-icones-login{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.container-icones-login .icons{
+    opacity: 1;
+    height: 30px;
+}
+.container-icones-login .icons:nth-child(1){
+    margin-top: 5px;
+    height: 29px;
+}
+#fechar{
+    position: absolute;
+    background:var( --cor-fundo);
+    padding: 0;
+    opacity: 1;
+    border-radius: 50%;
+    top: -20px;
+    right: -20px;
+}
+.container-input-senha{
+    position: relative;
+}
+.container-input-senha input{
+width: 100%;
+}
+.visualizar{
+cursor: pointer;
+}
+.container-input-senha .visualizar{
+width: 20px;
+position: absolute;
+z-index: 2;
+top: 10px;
+right: 10px;
+}
+#olho-aberto{
+display: none;
 }
