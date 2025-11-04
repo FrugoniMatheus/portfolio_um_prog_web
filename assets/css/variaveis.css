@@ -137,11 +137,25 @@ input:focus {
   border: solid var(--cor-botao) 2px;
   opacity: 1;
 }
+.avatar{
+    height: 50px;
+    width: 50px;
+    background: var(--cor-botao);
+    color: var(--cor-fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-transform: uppercase; 
+    cursor: pointer;
+}
+#avatar:hover .avatar{
+  background: var(--cor-fonte);
+}
 
 #input-pesquisa::placeholder {
   padding: 0 24px;
 }
-
 .destaque {
   text-decoration: none;
   color: var(--cor-fonte);

@@ -46,26 +46,29 @@
           <a href="./carrinho.html">
             <img src="./assets/imgs/icons/icone_compras.svg" class="icons" />
           </a>
-          <img
+        <img
             class="icons"
             src="assets/imgs/icons/icone_conta.svg"
             id="conta-icon"
-            onclick="AbrirLogin()"
-          />
-        </div>
+            onclick="validarSessao()"
+          /> 
+          <div id="avatar">
+            
+          </div>
       </div>
     </header>
  <section class="login" id="login" inert>
    <div class="container-form">
     <img src="./assets/imgs/icons/icone_conta(2).svg"  id="icon-conta">
-    <form action="" method="post" class="form-login">
-    <input type="text" id='nome'placeholder="Usuario" required>
+    <form  class="form-login" id="form-login">
+    <input type="text" id='usuario'placeholder="Usuario" required>
     <div class="container-input-senha">
       <input type="password" id='senha'placeholder="Senha" required>
       <img src="./assets/imgs/icons/icone_olho_fechado.svg" class="visualizar" id="olho-fechado" onclick="mostrarSenha()">
        <img src="./assets/imgs/icons/icone_olho_aberto.svg" class="visualizar" id="olho-aberto" onclick="mostrarSenha()">
+       <div id="imsg"></div>
+       <div class="links"><a href="">Esqueceu sua Senha ?</a> </div>
     </div>
-    <div class="links"><a href="">Esqueceu sua Senha ?</a> </div>
     <button class="btn-submit">Entrar</button>
   </form>
   <div class="container-icones-login">
@@ -78,6 +81,7 @@
   <img src="./assets/imgs/icons/icone_fechar.svg" class="icons" id="fechar" onclick="fecharLogin()">
   </div>
  </section>
+   
     <section class="container-form-contato">
       <div class="form_box">
         <h2>Fale conosco!</h2>

@@ -87,6 +87,9 @@ font-size: 0.8rem;
 }
 .container-input-senha{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .container-input-senha input{
 width: 100%;
@@ -103,4 +106,10 @@ right: 10px;
 }
 #olho-aberto{
 display: none;
+}
+#imsg{
+    height: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
 }
