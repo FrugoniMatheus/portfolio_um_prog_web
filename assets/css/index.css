@@ -11,36 +11,55 @@
   width: 90vw;
   height: 82vh;
   flex-direction: row;
-  justify-content: center;
 }
 .slogan {
-  width: 100%;
+  width: 55%;
   background: var(--cor-home);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 60px;
-  padding: 0px 0px 0px 20px;
+  align-items: center;
+  gap: 10px;
   font-family: var(--fonte-princiapl);
   color: var(--cor-fundo);
   text-transform: uppercase;
+  text-align: center;
   font-size: 2em;
 }
-
-.slogan > a {
-  font-size: 0.8em;
+.link-banner{
+  position: relative;
+}
+.slogan >.link-banner a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--cor-botao);
+  font-weight: 700;
+  z-index: 2;
+  transition: 1s;
+}
+.slogan >.link-banner img{
+  position: absolute;
+  width: 40px;
+  z-index: 1;
+  right: 41%;
+  top: 40px;
+}
+/* .slogan > a {
+  font-size: 1.3rem;
   width: fit-content;
   text-decoration: none;
   color: var(--cor-fundo);
+  font-weight: 700;
+  background-color: var(--cor-botao);
   border: solid var(--cor-botao);
-  border-radius: 30px;
+  border-radius: 20px;
   transition: 1s;
   padding: 15px;
-}
+} */
 
 .slogan > a:hover {
-  background-color: var(--cor-botao);
+background-color: var(--cor-botao);
 }
 
 .slogan > a > a {
@@ -49,7 +68,7 @@
 }
 
 .container #tenis-baner {
-  max-width: 50vw;
+  width:44%;
   object-fit: cover;
 }
 
@@ -168,3 +187,4 @@
   width: 100%;
   justify-content: space-between;
 }
+
