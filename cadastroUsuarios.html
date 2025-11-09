@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/variaveis.css" />
+    <link rel="stylesheet" href="./assets/css/cadastro.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/logo/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <section class="cadastro">
+      <form id="forms-cadastro" method="post"> 
+        <h2 id="titulo-cadastro">Cadastro</h2>
+        <div class="inputs_cadastro" >
+          <label>Nome Completo</label>
+          <input class="nome validar"  type="text" name="nome" id="nome" />
+        </div>
+
+        <div class="inputs_cadastro" >
+          <label>E-mail</label>
+          <input class="email validar"  type="email" name="email" id="email" />
+        </div>
+
+        <div class="inputs_cadastro" >
+          <label>CPF</label>
+          <input  class="CPF validar" type="text" name="CPF" id="CPF"  />
+        </div>
+
+        <div class="inputs_cadastro" >
+          <label>Telefone</label>
+          <input class="telefone validar" type="text" name="telefone" id="telefone"  />
+        </div>
+        <div class="inputs_cadastro">
+          <label>CEP</label>
+          <input class="CEP validar" type="text" name="CEP" id="CEP" />
+        </div>
+
+        <div class="inputs_cadastro">
+          <label>Endereço</label>
+          <input class="endereco validar" type="text" name="endereco" id="endereco"  />
+        </div>
+
+        <div class="inputs_cadastro">
+          <label>Senha</label>
+          <input class="senha validar" type="password" name="senha" id="senha"  />
+        </div>
+        <div class="inputs_cadastro">
+          <label>Repetir Senha</label>
+          <input class="repetirSenha validar" type="password" name="repetirSenha" id="repetirSenha"  />
+        </div>
+        <div class="container-button">
+          <button type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./assets/scripts/validaCPF.js"></script>
+    <script src="./assets/scripts/cadastro.js"></script>
+  </body>
+</html>

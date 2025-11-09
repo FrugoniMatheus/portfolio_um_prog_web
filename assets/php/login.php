@@ -3,23 +3,17 @@ header('Content-Type: application/json; charset=utf-8');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
-
 include("config.php");
-
-// Lê o JSON enviado pelo fetch()
 $dados = json_decode(file_get_contents("php://input"), true) ?? [];
-
-// Captura os dados enviados
-$email = $dados["email"] ?? ''; // o JS ainda envia "usuario"
+$email = $dados["email"] ?? ''; 
 $senha = $dados["senha"] ?? '';
 
-// Verifica se os campos vieram preenchidos
 if (!$email || !$senha) {
     echo json_encode(["sucesso" => false, "mensagem" => "Campos obrigatórios."]);
     exit;
 }
 
-// Aqui ajustamos o nome da tabela e os campos de acordo com o seu banco
+
 $sql = "SELECT id_cliente, nome, email, senha FROM clientes WHERE email = ? LIMIT 1";
 $stmt = $conn->prepare($sql);
 
@@ -45,19 +39,18 @@ if ($result->num_rows > 0) {
 
         echo json_encode([
             "sucesso" => true,
-            "mensagem" => "Login bem-sucedido!",
+            "mensagem" => "",
             "usuario" => [
                 "id_cliente" => $user["id_cliente"],
                 "nome" => $user["nome"],
                 "email" => $user["email"]
             ]
         ]);
-
     } else {
-        echo json_encode(["sucesso" => false, "mensagem" => "Senha incorreta."]);
+        echo json_encode(["sucesso" => false, "mensagem" => "Usuario ou Senha incorretos."]);
     }
 } else {
-    echo json_encode(["sucesso" => false, "mensagem" => "Usuário não encontrado."]);
+    echo json_encode(["sucesso" => false, "mensagem" => "Usuario ou Senha incorretos."]);
 }
 
 $stmt->close();

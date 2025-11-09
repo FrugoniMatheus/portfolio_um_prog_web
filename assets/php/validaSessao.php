@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['id_cliente'])) {
     function gerarIniciais($nomeCompleto) {
     $partes = explode(" ", trim($nomeCompleto));
-    if (count($partes) < 2) return strtoupper(substr($partes[0], 0, 1)); // só 1 nome
+    if (count($partes) < 2) return strtoupper(substr($partes[0], 0, 1));
 
     $primeiraLetraNome = substr($partes[0], 0, 1);
     $primeiraLetraSobrenome = substr(end($partes), 0, 1);
@@ -11,7 +11,7 @@ if (isset($_SESSION['id_cliente'])) {
     return strtoupper($primeiraLetraNome . $primeiraLetraSobrenome);
 }
 
-$iniciais =  gerarIniciais($_SESSION['nome']);        // LP  
+$iniciais =  gerarIniciais($_SESSION['nome']); 
     echo json_encode([
         "logado" => true,
         "nome" => $_SESSION['nome'],

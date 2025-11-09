@@ -7,7 +7,7 @@ function fecharLogin() {
         login.style.opacity = 0
         senha.value = ''
         usuario.value = ''
-        document.body.style.overflow = 'scroll';
+        document.body.style.overflowY = 'scroll';
 }
 function AbrirLogin() {
         const usuario = document.getElementById("usuario");
@@ -127,7 +127,8 @@ function gerarAvatar(iniciais){
  async function encerrarSessao(){
 const valid = 1
          try {
-             const response = await fetch("./assets/php/encerrarSessao.php", {
+             const response = await 
+             fetch("./assets/php/encerrarSessao.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({valid})
