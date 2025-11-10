@@ -38,25 +38,14 @@
   z-index: 2;
   transition: 1s;
 }
-.slogan >.link-banner img{
+.slogan >.link-banner a img{
   position: absolute;
+  animation: mover 10s linear 0s infinite normal forwards;
   width: 40px;
   z-index: 1;
   right: 41%;
-  top: 40px;
+  top: 45px;
 }
-/* .slogan > a {
-  font-size: 1.3rem;
-  width: fit-content;
-  text-decoration: none;
-  color: var(--cor-fundo);
-  font-weight: 700;
-  background-color: var(--cor-botao);
-  border: solid var(--cor-botao);
-  border-radius: 20px;
-  transition: 1s;
-  padding: 15px;
-} */
 
 .slogan > a:hover {
 background-color: var(--cor-botao);
@@ -188,3 +177,30 @@ background-color: var(--cor-botao);
   justify-content: space-between;
 }
 
+@keyframes mover {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
+}

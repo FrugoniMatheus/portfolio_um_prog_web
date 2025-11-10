@@ -66,6 +66,33 @@ function mostrarProdutos() {
            </div>
          </div>`;
     }
+    else if (produto.estoque <= 0 && produto.tipo === 'esportivo') {
+      htmlConteudo3 += `
+         <div class="produtos-card">
+           <img src="${produto.urlImg}" alt="${produto.nome}" class='indisponivel'/>
+           <div class="descricao">
+             <h3>${produto.nome}</h3>
+             <p>ID:${index + 1}<P>
+             <p>Estoque: Indisponivel<P>
+           </div>
+           Produto Temporariamente Indisponivel
+           </div>
+         </div>`;
+    }
+     else if (produto.estoque <= 0 && produto.tipo === 'casual') {
+      htmlConteudo+= `
+         <div class="produtos-card">
+           <img src="${produto.urlImg}" alt="${produto.nome}" class='indisponivel'/>
+           <div class="descricao">
+             <h3>${produto.nome}</h3>
+             <p>ID:${index + 1}<P>
+             <p>Estoque: Indisponivel<P>
+           </div>
+           <div>
+           <p>Produto Temporariamente Indisponivel</p>
+           </div>
+         </div>`;
+    }
   });
   container.innerHTML = htmlConteudo;
   container3.innerHTML = htmlConteudo3;

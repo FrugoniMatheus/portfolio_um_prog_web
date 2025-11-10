@@ -55,7 +55,7 @@ function mostrarCarrinho() {
   </div>
   <div class="info-quantidade">
     <h3>Quantidade</h3>
-    <div class="container-produtos"> 
+    <div class="container-produtos" id="produtos-quantidade"> 
       <button class="btn-acao" onclick="retirar(${index})">-</button>
       <div class="quantidade">
         <p>${produto.quantidade}</p>

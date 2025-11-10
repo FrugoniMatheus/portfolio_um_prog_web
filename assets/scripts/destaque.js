@@ -28,6 +28,20 @@ listaProdutos.forEach((produto,index) => {
            </div>
          </div>`;
     }
+     if(produto.estoque<=0 && produto.destaque === 'sim'){
+        HtmlConteudo3 += `
+         <div class="produtos-card">
+           <img src="${produto.urlImg}" alt="${produto.nome}" class='indisponivel' />
+           <div class="descricao">
+             <h3>${produto.nome}</h3>
+             <p>ID:${index + 1}<P>
+             <p>Estoque: Indisponivel<P>
+           </div>
+          <div>
+           <p>Produto Temporariamente Indisponivel</p>
+           </div>
+         </div>`;
+    }
 }
 );
 container3.innerHTML= HtmlConteudo3;
