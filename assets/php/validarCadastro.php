@@ -19,7 +19,6 @@ if (!$stmt) {
     echo json_encode(["sucesso" => false, "mensagem" => "Erro na preparação da consulta."]);
     exit;
 }
-
 $stmt->bind_param("ss", $cpf,$email);
 $stmt->execute();
 $result = $stmt->get_result();

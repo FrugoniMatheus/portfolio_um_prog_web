@@ -55,7 +55,6 @@ class ValidaFormulario {
         this.criaErro(campo, `Campo "${label}" não pode estar em branco.`);
         valid = false;
       }
-
       if(campo.classList.contains('CPF')) {
         if(!this.validaCPF(campo)) valid = false;
       }
@@ -65,7 +64,10 @@ class ValidaFormulario {
   }
   validaCPF(campo) {
     const cpf = new ValidaCPF(campo.value);
-
+    if(campo.length > 14){
+      this.criaErro(campo, 'Numeros de caracteres ultrapassou o limite permitido');
+      return false;
+    }
     if(!cpf.valida()) {
       this.criaErro(campo, 'CPF inválido.');
       return false;

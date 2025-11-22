@@ -1,28 +1,25 @@
 let HtmlConteudo3 ='';
+let listaProdutos =[];
 let container3= document.getElementById('grid-produtos-destaque');
-document.addEventListener("DOMContentLoaded", () => {
-  mostrarDestaque();
-});
 function mostrarDestaque (){
-const listaProdutos = JSON.parse(localStorage.getItem('produto'))||[];
 if(listaProdutos.length === 0){
 HtmlConteudo3 = `<p>Sem produtos cadastrados<p>`
 }
-listaProdutos.forEach((produto,index) => {
+listaProdutos.forEach((produto) => {
     if(produto.estoque>0 && produto.destaque === 'sim'){
         HtmlConteudo3 += `
          <div class="produtos-card">
            <img src="${produto.urlImg}" alt="${produto.nome}" />
            <div class="descricao">
              <h3>${produto.nome}</h3>
-             <p>ID:${index + 1}<P>
+             <p>ID:${produto.id}<P>
              <p>Estoque: ${produto.estoque}<P>
-             <span class="preco-antigo">R$ ${produto.precoAntigo.toFixed(2).replace('.', ',')}</span><br />
-             <span>R$ ${produto.precoAtual.toFixed(2).replace('.', ',')}</span>
+             <span class="preco-antigo">R$ ${produto.preco}</span><br />
+             <span>R$ ${produto.preco.replace(".", ",")}</span>
            </div>
            <div class="posi-botoes">
            <button class="compra" onclick="comprar(${produto.id})">Comprar</button>
-           <a href="./carrinho.html" onclick="addCarrinho(${index})">
+           <a onclick="consultarCarrinho(${produto.id})">
              <img class="icons-catalogo" src="./assets/imgs/icons/icone_compras_preto.svg" alt="">
            </a>
            </div>
@@ -34,7 +31,7 @@ listaProdutos.forEach((produto,index) => {
            <img src="${produto.urlImg}" alt="${produto.nome}" class='indisponivel' />
            <div class="descricao">
              <h3>${produto.nome}</h3>
-             <p>ID:${index + 1}<P>
+             <p>ID:${produto.id}<P>
              <p>Estoque: Indisponivel<P>
            </div>
           <div>
@@ -46,16 +43,43 @@ listaProdutos.forEach((produto,index) => {
 );
 container3.innerHTML= HtmlConteudo3;
 }
-function addCarrinho(index) {
-     const produto = JSON.parse(localStorage.getItem('produto')) || [];
-  if (produto[index].estoque <= 0) {
-    produto[index].estoque = 0
-  }
-  else {
-    produto[index].estoque -= 1
-    produto[index].quantidade += 1
-    localStorage.setItem('produto', JSON.stringify(produto));
-    mostrarDestaque();
-  }
+async function addCarrinho(id_produto) {
+  let formData = new FormData();
+    formData.append("id_produto", id_produto);
+    formData.append("quantidade", 1);
+
+    fetch("assets/php/adicionarCarrinho.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      window.location.href = "carrinho.html";
+    });
 }
 
+ fetch("assets/php/loadProdutos.php")
+.then(response => response.json()).then(data=>{
+    listaProdutos = data
+    mostrarDestaque()
+})
+   .catch(err => console.error("Erro ao verificar sessão:", err));
+
+async function consultarCarrinho(id_produto){
+   const resposta = await fetch("assets/php/mostrarCarrinho.php");
+   const carrinho = await resposta.json();
+   console.table(carrinho)
+   let verificador=0;
+  carrinho.forEach((i)=>{
+      if(i.quantidade < i.estoque && i.id_produto === id_produto && verificador<1 ){
+        addCarrinho(id_produto)
+       verificador = 1
+      }
+      if(i.id_produto === id_produto){
+        verificador = 2
+      }
+  })
+  if(verificador === 0){
+    addCarrinho(id_produto);
+  }
+}
