@@ -104,11 +104,12 @@ class ValidaFormulario {
       background: "#ff0000",
       }
       }).showToast();
+     
       return false;
     }
 
   } catch (err) {
-    alert("Erro ao verificar sessão:");
+    console.log(err);
     return false;
   }
  }
@@ -127,8 +128,6 @@ async cadastrarCliente() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ cpf, nome, telefone, email, senha, cep, endereco })
     });
-
-    // 👇 Lê apenas uma vez
     const text = await response.text();
 
     let data;
@@ -176,5 +175,8 @@ limparCampos(){
                window.location.href = "index.html";
             }, 2000);
         }
+}
+function voltar(){
+  window.location.href='index.html'
 }
 const valida = new ValidaFormulario();

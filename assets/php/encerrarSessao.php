@@ -17,11 +17,8 @@ if($valid === 1){
             $params["secure"], $params["httponly"]
         );
     }
-    
-    // Finalmente, destrói a sessão
     session_destroy();
     
-    // Retorna uma resposta JSON (caso use fetch)
     echo json_encode(["sucesso" => true, "mensagem" => "Sessão encerrada com sucesso."]);
 }
 else{

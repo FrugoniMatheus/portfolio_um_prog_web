@@ -55,11 +55,27 @@
         </div>
       </div>
     </header>
+   <div class="opcoes-menu">
+        <ul>
+          <li onclick="opcoes(1)">
+            <img src="assets/imgs/icons/icone_conta.svg" class="icones-menu" id="icone-1"/>
+            <p>Meu Perfil</p>
+          </li>
+          <li onclick="opcoes(2)">
+            <img src="assets/imgs/icons/icone_pedido.svg" class="icones-menu" id="icone-2" />
+            <p>Meus Pedidos</p>
+          </li>
+          <li onclick="opcoes(3)">
+            <img src="assets/imgs/icons/icone_signout.svg" class="icones-menu" id="icone-3"/>
+            <p>Sair</p>
+          </li>
+        </ul>
+    </div>
 <section class="login" id="login" inert>
    <div class="container-form">
     <img src="./assets/imgs/icons/icone_conta(2).svg"  id="icon-conta">
     <form  class="form-login" id="form-login">
-    <input type="text" id='usuario'placeholder="Usuario" required>
+    <input type="email" id='usuario'placeholder="E-mail" required>
     <div class="container-input-senha">
       <input type="password" id='senha'placeholder="Senha" required>
       <img src="./assets/imgs/icons/icone_olho_fechado.svg" class="visualizar" id="olho-fechado" onclick="mostrarSenha()">

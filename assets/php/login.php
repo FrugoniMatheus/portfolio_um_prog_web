@@ -13,7 +13,6 @@ if (!$email || !$senha) {
     exit;
 }
 
-
 $sql = "SELECT id_cliente, nome, email, senha FROM clientes WHERE email = ? LIMIT 1";
 $stmt = $conn->prepare($sql);
 
@@ -47,10 +46,10 @@ if ($result->num_rows > 0) {
             ]
         ]);
     } else {
-        echo json_encode(["sucesso" => false, "mensagem" => "Usuario ou Senha incorretos."]);
+        echo json_encode(["sucesso" => false, "mensagem" => "E-mail ou Senha incorretos."]);
     }
 } else {
-    echo json_encode(["sucesso" => false, "mensagem" => "Usuario ou Senha incorretos."]);
+    echo json_encode(["sucesso" => false, "mensagem" => "E-mail ou Senha incorretos."]);
 }
 
 $stmt->close();

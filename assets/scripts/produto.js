@@ -6,16 +6,7 @@ let htmlConteudo = '';
 let htmlConteudo3 = '';
 let htmlConteudo4 = '';
 let listaProdutos = [];
-let carrinho = [];
 let valor = 0
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   listaProdutos = JSON.parse(localStorage.getItem('produto')) || [];
-//   if (listaProdutos.length === 0) {
-//     localStorage.setItem('produto', JSON.stringify(produtos));
-//   }
-//   mostrarProdutos();
-// });
 const prodCarrinho = [];
 function mostrarProdutos() {
   htmlConteudo = '';
@@ -27,7 +18,6 @@ function mostrarProdutos() {
            <div class="descricao">
              <h3>${produto.nome}</h3>
              <p>ID:${produto.id}<P>
-             <p>Estoque: ${produto.estoque}<P>
              <span class="preco-antigo">R$ ${produto.preco.replace(".", ",")}</span><br />
              <span>R$ ${produto.preco.replace(".", ",")}</span>
            </div>
@@ -46,7 +36,6 @@ function mostrarProdutos() {
            <div class="descricao">
              <h3>${produto.nome}</h3>
              <p>ID:${index + 1}<P>
-             <p>Estoque: ${produto.estoque}<P>
              <span class="preco-antigo">R$ ${produto.preco.replace(".", ",")}</span><br />
              <span>R$ ${produto.preco.replace(".", ",")}</span>
            </div>
@@ -89,7 +78,6 @@ function mostrarProdutos() {
   container.innerHTML = htmlConteudo;
   container3.innerHTML = htmlConteudo3;
 }
-
 async function adicionarCarrinho(id_produto) {
   let formData = new FormData();
   formData.append("id_produto", id_produto);

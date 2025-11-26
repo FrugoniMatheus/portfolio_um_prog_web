@@ -16,7 +16,7 @@ if (!isset($_SESSION['carrinho'])) {
 if (!isset($_SESSION['carrinho'][$id])) {
     $_SESSION['carrinho'][$id] = $qtd;
 } else {
-    $_SESSION['carrinho'][$id] += $qtd; // soma quantidade
+    $_SESSION['carrinho'][$id] += $qtd; 
 }
 
 echo json_encode(["sucesso" => true, "carrinho" => $_SESSION['carrinho']]);

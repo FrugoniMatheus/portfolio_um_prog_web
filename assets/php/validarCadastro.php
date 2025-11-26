@@ -11,7 +11,6 @@ if (!$email || !$cpf) {
     echo json_encode(["sucesso" => false, "mensagem" => "Campos obrigatórios."]);
     exit;
 }
-
 $sql = "SELECT cpf,email FROM clientes WHERE cpf= ? or email = ? LIMIT 1";
 $stmt = $conn->prepare($sql);
 

@@ -6,7 +6,6 @@ $carrinho = $_SESSION['carrinho'] ?? [];
 $itens = [];
 
 foreach ($carrinho as $id => $qtd) {
-
     $stmt = $conn->prepare("SELECT nome, preco_unitario, url_img,estoque FROM produtos WHERE id_produto = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();

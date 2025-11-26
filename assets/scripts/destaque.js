@@ -1,11 +1,12 @@
 let HtmlConteudo3 ='';
 let listaProdutos =[];
 let container3= document.getElementById('grid-produtos-destaque');
+
 function mostrarDestaque (){
 if(listaProdutos.length === 0){
 HtmlConteudo3 = `<p>Sem produtos cadastrados<p>`
 }
-listaProdutos.forEach((produto) => {
+listaProdutos.forEach((produto,index) => {
     if(produto.estoque>0 && produto.destaque === 'sim'){
         HtmlConteudo3 += `
          <div class="produtos-card">
@@ -13,7 +14,6 @@ listaProdutos.forEach((produto) => {
            <div class="descricao">
              <h3>${produto.nome}</h3>
              <p>ID:${produto.id}<P>
-             <p>Estoque: ${produto.estoque}<P>
              <span class="preco-antigo">R$ ${produto.preco}</span><br />
              <span>R$ ${produto.preco.replace(".", ",")}</span>
            </div>
@@ -79,7 +79,7 @@ async function consultarCarrinho(id_produto){
         verificador = 2
       }
   })
-  if(verificador === 0){
-    addCarrinho(id_produto);
-  }
+    if(verificador === 0){
+      addCarrinho(id_produto);
+    }
 }

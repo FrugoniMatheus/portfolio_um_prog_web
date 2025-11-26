@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$id = $_POST['id_produto']; // por exemplo
+$id = $_POST['id_produto'];
 
 unset($_SESSION['carrinho'][$id]);
 

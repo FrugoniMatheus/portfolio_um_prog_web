@@ -3,11 +3,12 @@ const login = document.getElementById('login')
 function fecharLogin() {
         const usuario = document.getElementById("usuario");
         const senha = document.getElementById("senha");
-        login.setAttribute('inert', '')
-        login.style.opacity = 0
-        senha.value = ''
-        usuario.value = ''
+        login.setAttribute('inert', '');
+        login.style.opacity = 0;
+        senha.value = '';
+        usuario.value = '';
         document.body.style.overflowY = 'scroll';
+        window.location.href = 'index.html'
 }
 function AbrirLogin() {
         const usuario = document.getElementById("usuario");
@@ -40,12 +41,9 @@ function validarSessao(){
           .then(res => res.json())
           .then(data => {
             if (data.logado) {
-              console.log("Usuário logado:", data.nome);
-              console.log("iniciais: ", data.iniciais)
               gerarAvatar(data.iniciais)
             } else {
-              console.log("Nenhum usuário logado");
-              AbrirLogin() 
+                AbrirLogin() 
             }
           })
           .catch(err => console.error("Erro ao verificar sessão:", err));
@@ -117,14 +115,15 @@ function gerarAvatar(iniciais){
         const conta = document.getElementById('conta-icon')
         conta.style.display='none'
         avatar.innerHTML =  `
-        <div class="avatar" onclick="encerrarSessao()">
+        <div class="avatar" onclick="menu()">
         <h3>${iniciais}</h3>
         </div>
         `
 }
+
  validarSessao()
 
- async function encerrarSessao(){
+async function encerrarSessao(){
 const valid = 1
          try {
              const response = await 
@@ -143,4 +142,23 @@ const valid = 1
        alert("Erro:", error);
     }
 }
-
+function menu(){
+    var menu = document.querySelector('.opcoes-menu')
+    if(menu.style.height === "fit-content"){
+        menu.style.height = 0;
+    }
+    else{
+        menu.style.height = "fit-content";
+    }
+}
+function opcoes(x){
+    if(x === 1){
+        window.location.href = "perfil.html";
+    }
+    else if(x=== 2){
+         window.location.href = "pedidos.html";
+    }
+    else if(x===3){
+        encerrarSessao();
+    }
+}

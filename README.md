@@ -1,53 +1,71 @@
-# Atividade Prática – Parte 1
+![Capa do meu projeto](assets/imgs/imgs-banner/banner%20site%20New%20Senakers.png)
 
-## Objetivo: Criar um site simples para uma loja fictícia de produtos de cuidados pessoais, apresentando informações básicas sobre a empresa, seus produtos e formas de contato.
+Loja de Tênis – Projeto Acadêmico
 
-### Páginas:
+Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento Web na faculdade, com o objetivo de aplicar na prática os principais conceitos de front-end e back-end. A proposta consistia na criação de um site completo de uma loja fictícia no meu caso, uma loja especializada em tênis passando por etapas evolutivas de implementação.
 
-Página inicial (index.html):
+Estrutura do Projeto
 
-  1. Cabeçalho com o logotipo da empresa e menu de navegação.
+O desenvolvimento foi dividido em quatro etapas principais, cada uma focada em determinadas tecnologias e funcionalidades:
 
-  2. Seção de "Sobre nós" com uma breve descrição da empresa e seus valores.
+1) Primeira Etapa – Página Inicial, Identidade Visual (HTML + CSS)
 
-  3. Seção de "Produtos em destaque" com imagens e breves descrições de alguns produtos.
+Criação da página inicial com os produtos exibidos em cards, contendo:
 
-  4. Rodapé com informações de contato e links para redes sociais.
+Nome
 
-Página de produtos (produtos.html):
+Imagem
 
-  1. Cabeçalho com o logotipo da empresa e menu de navegação.
+Preço
 
-  2. Lista de produtos disponíveis, cada um com uma imagem, nome e preço.
+Desenvolvimento da identidade visual da marca, incluindo:
 
-  3. Botão de "Comprar" em cada produto, que pode levar o usuário para uma página de detalhes do produto ou um formulário de pedido.
+Criação da logo
 
-  4. Rodapé com informações de contato e links para redes sociais.
+Definição de paleta de cores e elementos gráficos
 
-Página de contato (contato.html):
+Implementação utilizando apenas HTML e CSS, priorizando design, responsividade e estética da loja.
 
-  1. Cabeçalho com o logotipo da empresa e menu de navegação.
- 
-  2. Formulário de contato com campos para nome, e-mail, mensagem e um botão de envio.
+2) Segunda Etapa – Seção de Contatos, Rodapé e Detalhes do Produto
 
-  3. Informações de contato adicionais, como endereço e telefone.
+Implementação da página de contatos com informações para atendimento.
 
-  4. Mapa com a localização da loja.
+Desenvolvimento do rodapé da aplicação.
 
-  5. Rodapé com informações de contato e links para redes sociais.
+Criação da página de detalhes do produto, exibindo informações completas de cada item selecionado.
 
-Página de detalhes do produto (detalhes_produto.html) - expansão com CSS:
+3) Terceira Etapa – Carrinho de Compras (JavaScript + LocalStorage)
 
-  1. Cabeçalho com o logotipo da empresa e menu de navegação.
+Implementação da funcionalidade de carrinho de compras, incluindo:
 
-  2. Imagem em destaque do produto com descrição detalhada.
+Adicionar e remover produtos
 
-  3. Informações sobre preço, disponibilidade, avaliações dos clientes, entre outros.
+Exibição dinâmica dos itens selecionados
 
-  4. Rodapé com informações de contato e links para redes sociais.
+Persistência dos dados utilizando LocalStorage, garantindo que o carrinho seja mantido mesmo ao atualizar ou fechar o navegador
 
-Expansão com CSS:
+4) Quarta Etapa – PHP + Banco de Dados + Sessões
 
-  1. Após criar a estrutura básica das páginas usando HTML, a expansão com CSS permitirá melhorar a aparência visual do site, aplicando estilos como cores, fontes, layouts, imagens de fundo, bordas, animações e responsividade para dispositivos móveis.
+Introdução ao uso de PHP no back-end.
 
-  2. Serão criados arquivos CSS separados para cada página, além de uma folha de estilos principal que poderá ser vinculada a todas as páginas do site. O CSS também será usado para tornar o site responsivo, ajustando o layout e o tamanho dos elementos para diferentes tamanhos de tela.
+Integração com MySQL para carregamento e armazenamento dinâmico de dados.
+
+Migração dos dados dos produtos e do carrinho para processamento no servidor.
+
+Implementação da funcionalidade de finalizar pedido, salvando as informações no banco.
+
+Utilização de sessões em PHP para:
+
+Controle de usuário logado
+
+Gerenciamento seguro do carrinho e das informações do pedido
+
+---- Status do Projeto -----
+
+Em desenvolvimento contínuo
+O sistema ainda está recebendo melhorias, novas funcionalidades e otimizações. A ideia é tornar o projeto cada vez mais robusto e próximo de um ambiente real de e-commerce.
+
+autores:
+
+Lucas Pinheiro dos Santos
+Matheus Kauan Frugoni

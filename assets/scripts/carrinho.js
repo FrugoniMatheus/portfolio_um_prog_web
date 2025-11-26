@@ -37,9 +37,6 @@ async function carregarCarrinho() {
     HtmlConteudo2 = '';
   }
   let total = 0
-  let precoAntigo = 0
-  let descontos = 0
-
   carrinho.forEach((produto) => {
     total+=produto.subtotal
     if (produto.quantidade > 0) {
@@ -50,7 +47,7 @@ async function carregarCarrinho() {
     <div class="info-prod">
       <h3>Produto</h3>
       <span>Nome: ${produto.nome}</span>
-      <span>Estoque: ${produto.estoque}</span>
+      <span>Estoque: ${produto.estoque - produto.quantidade}</span>
       <span>Preço Unitario: R$ ${produto.preco_unitario}</span>
     </div>
   </div>
@@ -112,6 +109,9 @@ async function carregarCarrinho() {
           </div>
         </div>
 `
+    }
+    if(produto.quantidade === 0){
+      removerProduto(produto.id_produto)
     }
   }
   );
