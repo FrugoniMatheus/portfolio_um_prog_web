@@ -67,5 +67,6 @@ O sistema ainda está recebendo melhorias, novas funcionalidades e otimizações
 
 autores:
 
-Lucas Pinheiro dos Santos
+Lucas Pinheiro dos Santos &
 Matheus Kauan Frugoni
+
